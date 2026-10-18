@@ -295,7 +295,7 @@ body[data-mode="professional"] .floating-companion{width:82px;height:62px}
  .floating-companion .ajaw-px{transform:scale(.58);transform-origin:top left}
  .edge-squiggles{opacity:.09}
 }
-@media(max-width:360px){
+@media(max-width:340px){
  .profile-rail{flex-wrap:wrap}
  .profile-rail .view-controls{width:100%}
  .profile-rail .mode-switch{width:100%}
@@ -304,3 +304,5 @@ body[data-mode="professional"] .floating-companion{width:82px;height:62px}
  .intro-actions .button{font-size:11px;padding:12px 13px}
  .flagship-title h2{font-size:30px}
 }
+
+@media(max-width:600px){.profile-rail .view-controls{margin:0}}
