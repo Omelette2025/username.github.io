@@ -221,3 +221,86 @@ body[data-mode="professional"] .floating-companion .leonard-mascot{filter:none}
 /* Reference-based wide panda face and headphones. */
 body[data-mode="professional"] .floating-companion{width:82px;height:62px}
 @media(max-width:600px){body[data-mode="professional"] .floating-companion{width:66px;height:50px}}
+
+/* Phone layout: stable cards, compact chrome, reserved companion space. */
+.rail-mobile-name{display:none}
+@media(max-width:600px){
+ html{scroll-padding-top:20px;-webkit-text-size-adjust:100%}
+ body{padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+ main{padding-inline:18px}
+ .profile-rail{margin:10px 12px 0;padding:12px;gap:10px;border-radius:14px}
+ .profile-rail .rail-brand{gap:8px;min-width:0}
+ .rail-avatar{width:32px;height:32px;flex-shrink:0}
+ .rail-identity{display:block;min-width:0}
+ .rail-mobile-name{display:block;font-size:11px;line-height:1.5;letter-spacing:-.02em;white-space:nowrap}
+ .profile-rail .rail-license{display:block;font-size:8px;line-height:1.5;max-width:none;margin:0;white-space:nowrap}
+ .profile-rail .mode-switch button{font-size:10px;padding:9px 8px;min-height:36px}
+ .portfolio-intro{padding:25px 0 20px!important}
+ .intro-topline{margin-bottom:18px}
+ .portfolio-intro h1{font-size:clamp(31px,8.6vw,40px);line-height:1.12;letter-spacing:-.045em}
+ .portfolio-intro .hero-copy{font-size:15px;line-height:1.75;margin-top:18px}
+ .intro-bottom{margin:22px 0 23px}
+ .portfolio-intro .availability-note{margin-top:15px;font-size:10px}
+ .portfolio-intro .daily-tools{padding:12px 0}
+ .portfolio-intro .tools-label{flex-basis:118px}
+ .flagship-section{padding:23px 0 38px}
+ .flagship-classification{display:none}
+ .flagship-overline{align-items:center;margin-bottom:18px}
+ .flagship-title h2{font-size:clamp(30px,8.5vw,37px)}
+ .flagship-title{gap:10px}
+ .flagship-logo{width:40px;height:40px}
+ .flagship-subtitle{font-size:16px;line-height:1.5;margin-top:10px}
+ .flagship-summary{font-size:14px;line-height:1.8}
+ .flagship-intro{gap:14px;margin-bottom:20px}
+ .flagship-stage{border-radius:13px}
+ .flagship-tabs{gap:4px;padding:7px}
+ .flagship-tabs button{min-height:40px;font-size:11px;padding:9px 7px}
+ .platform-panel{padding:10px}
+ .platform-preview{height:235px;border-radius:7px}
+ .platform-preview img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:top left}
+ .platform-caption{padding:17px 4px 7px}
+ .platform-caption h3{font-size:17px;line-height:1.4}
+ .platform-caption p{font-size:14px;line-height:1.75}
+ .platform-caption>span{font-size:10px;margin-top:11px}
+ .flagship-foot{gap:15px;padding-top:19px}
+ .flagship-role{font-size:11px;line-height:1.7}
+ .flagship-foot .button{font-size:12px;min-height:44px;width:100%;justify-content:center;text-align:center}
+ .section{padding:38px 0}
+ .section-heading h2{font-size:30px;line-height:1.15}
+ .section-heading{margin-bottom:23px}
+ .split-heading>p{font-size:14px;line-height:1.8}
+ #engineeringCarousel{gap:18px;scroll-snap-type:x mandatory!important;scroll-padding-inline:0;padding:0 0 14px}
+ #engineeringCarousel .featured-card{flex:0 0 100%;max-width:100%;scroll-snap-align:start;scroll-snap-stop:always}
+ #engineeringCarousel [data-carousel-clone]{display:none!important}
+ #engineeringCarousel .project-media{height:225px;padding:10px}
+ #engineeringCarousel .project-info{padding-top:18px}
+ #engineeringCarousel .card-summary{font-size:14px;line-height:1.8}
+ .carousel-controls{justify-content:flex-end;gap:10px}
+ .carousel-controls .carousel-play{display:none}
+ .carousel-status{margin-right:auto}
+ .featured-card h3{font-size:21px;line-height:1.35}
+ #supporting .project-media{height:210px;padding:8px}
+ #supporting .featured-grid{gap:25px}
+ .contact-copy{padding:22px 18px}
+ .faq-panel{padding:23px 19px}
+ .contact-links{gap:16px;justify-content:flex-start}
+ .mobile-dock{left:12px;right:12px;bottom:calc(8px + env(safe-area-inset-bottom));min-height:58px;gap:1px;padding:8px 64px 8px 7px;border-radius:17px;box-shadow:0 3px 15px #0000000d;font-size:10px}
+ .mobile-dock a{padding:8px 6px;min-height:34px;display:grid;place-items:center}
+ .mobile-dock a[href="#about"]{display:none}
+ .mobile-dock button{width:32px;height:32px;flex:0 0 32px}
+ body .floating-companion,body[data-mode="professional"] .floating-companion,body[data-mode="personalized"] .floating-companion{z-index:91;right:23px;bottom:calc(17px + env(safe-area-inset-bottom));width:46px;height:40px;padding:0;background:none;border:0;box-shadow:none;display:grid;place-items:center}
+ .floating-companion .companion-label{display:none}
+ .floating-companion .companion-sprite{width:46px;height:40px}
+ .floating-companion .companion-sprite svg{width:46px;height:40px}
+ .floating-companion .ajaw-px{transform:scale(.58);transform-origin:top left}
+ .edge-squiggles{opacity:.09}
+}
+@media(max-width:360px){
+ .profile-rail{flex-wrap:wrap}
+ .profile-rail .view-controls{width:100%}
+ .profile-rail .mode-switch{width:100%}
+ .profile-rail .mode-switch button{flex:1}
+ .intro-actions{gap:13px;font-size:11px}
+ .intro-actions .button{font-size:11px;padding:12px 13px}
+ .flagship-title h2{font-size:30px}
+}
