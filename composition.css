@@ -1,0 +1,61 @@
+/* Shared composition: one spacing and typography system across all worlds. */
+.section{padding-top:64px;padding-bottom:64px}
+.section-heading{margin-bottom:30px}
+body[data-mode="professional"] .section-heading{padding-left:0;border-left:0}
+.section-heading h2{font-size:clamp(28px,3vw,38px);line-height:1.15;letter-spacing:-1px}
+.eyebrow,.card-kicker{font-family:"Segoe UI",Arial,sans-serif;font-size:11px;letter-spacing:.075em;line-height:1.6}
+.split-heading{align-items:end;gap:40px}
+.split-heading>p{max-width:34ch;font-size:15px;line-height:1.7}
+.section:after{display:none}
+#about:after,#experience:after,#education:after{display:block;opacity:.32}
+.featured-grid{gap:24px}
+.project-card.featured-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);box-shadow:none}
+.featured-card .project-media{height:230px;background:var(--surface2);padding:12px;border-bottom:1px solid var(--border)}
+.featured-card .project-media img{width:100%;height:100%;object-fit:contain;border-radius:4px}
+.featured-card .project-info{padding:24px}
+.featured-card h3{font-size:21px;line-height:1.3;letter-spacing:-.35px}
+.featured-card .card-summary{font-size:15px;line-height:1.7;max-width:50ch;margin-top:12px}
+.featured-card .tags{margin-top:18px;gap:12px}
+.featured-card .tags span{font-size:12px}
+.featured-card .text-button{margin-top:18px;font-size:14px}
+#supporting .featured-card .project-media{height:170px}
+#supporting .featured-card h3{font-size:18px}
+#supporting .featured-card .project-info{padding:20px}
+#supporting .featured-card .card-summary{font-size:14px}
+#experience .timeline{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 40px;border:0;padding-left:20px;position:relative}
+#experience .timeline:before{display:block;content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--border)}
+#experience .timeline-item,#experience .timeline-item.current-role{max-width:none;min-height:0;margin:0;padding:22px 0 24px;border:0;border-top:1px solid var(--border);background:none;border-radius:0;box-shadow:none}
+#experience .timeline-item:before{display:none}
+#experience .timeline-item h3{font-family:"Segoe UI",Arial,sans-serif;font-size:22px;line-height:1.3;margin-top:12px}
+#experience .timeline-item .card-kicker{font-size:12px}
+#experience .timeline-item .company{font-size:14px}
+#experience .timeline-item>p:last-of-type{font-size:15px;line-height:1.75}
+#experience .quest-reward{font-size:12px;margin-top:16px;line-height:1.7}
+.role-status{font-size:10px}
+.about-layout{gap:40px}.about-copy .lead{font-size:21px}.about-copy>p{line-height:1.75}
+.focus-grid article{padding-top:10px;padding-bottom:10px}.focus-grid h3{font-size:17px}.focus-grid p{font-size:14px;line-height:1.75}
+body[data-mode="personalized"] .hero-decoration{mask-image:linear-gradient(90deg,#000 0%,#000 15%,transparent 28%,transparent 70%,#000 82%,#000 100%)}
+body[data-mode="personalized"][data-template="costing"] .hero-decoration{opacity:.34}
+body[data-mode="personalized"][data-template="coding"] .hero-decoration{opacity:.4}
+.hero-copy{font-size:17px;line-height:1.75}
+@media(max-width:750px){#experience .timeline{grid-template-columns:1fr;gap:10px}.section{padding-top:44px;padding-bottom:44px}.split-heading{gap:16px}.featured-card .project-media{height:200px}.featured-card .project-info{padding:20px}.featured-card h3{font-size:19px}.split-heading>p{max-width:none}.about-layout{gap:24px}}
+
+/* Minimal reading treatment; original quest terrain stays local to the journey. */
+body[data-mode="professional"]{--text:#203329;--muted:#43584a;--bg:#edf0e9;--surface:#fafbf7;--surface2:#e6ece1;--border:#c3cfc0}
+body[data-mode="professional"] main:before,body[data-mode="personalized"] main:before{display:none!important}
+.section:after,#about:after,#experience:after,#education:after{display:none}
+#experience:before{display:block!important;content:'';position:absolute;inset:110px 0 30px;z-index:-1;pointer-events:none;background:url('assets/img/quest-terrain.svg') right center/100% 100% no-repeat;opacity:.1}
+#experience .timeline:before{display:none}
+.section-heading .eyebrow,.card-kicker{font-size:12px;letter-spacing:.045em;font-weight:600}
+.about-copy>p,.featured-card .card-summary,#experience .timeline-item>p:last-of-type,.credential p{font-size:16px;line-height:1.8}
+#supporting .featured-card .card-summary,.focus-grid p,.learning-grid p{font-size:15px;line-height:1.8}
+#experience .timeline-item .company{font-size:15px}
+#experience .quest-reward,.identity-note span,.featured-card .tags span{font-size:13px;line-height:1.7}
+body[data-mode="personalized"] .section-heading .eyebrow:before{content:none}
+.featured-card .project-info{padding:22px}
+.featured-card h3{font-weight:700;line-height:1.4}
+body[data-mode="personalized"] .hero-decoration,body[data-mode="personalized"][data-template="coding"] .hero-decoration,body[data-mode="personalized"][data-template="costing"] .hero-decoration{opacity:.22}
+body[data-mode="personalized"] .hero-role{letter-spacing:.07em;line-height:1.8}
+.world-map a{font-size:13px}.world-map{margin-top:0}
+@media(max-width:650px){.section-heading .eyebrow{font-size:11px}.about-copy>p,#experience .timeline-item>p:last-of-type,.featured-card .card-summary{font-size:16px}#experience:before{opacity:.065}.section-heading h2{line-height:1.25}}
+@media print{#experience:before{display:none!important}}

@@ -1,63 +1,82 @@
-<!--
-  READ THIS FIRST:
+Ruzzel A. Dulay, Registered Civil Engineer. Taguig City, Philippines.
 
-  This file is the ONLY thing your portfolio chatbot should ever read from.
-  It is NOT connected to your private vault, and brain.py will never write
-  to this file automatically. You edit this by hand.
+Project Lift, Elevator Proposal Automation
+Excel/VBA proposal generation that connects pricing and technical specifications in one repeatable workflow.
+Context Problem: Proposal generation for Mitsubishi home elevators required manually updating identical specifications across three separate documents, error-prone and time-consuming. Client/Use: Developed in-house at International Elevator & Equipment, Inc. (IEEI, subsidiary of Mitsubishi Electric) during employment tenure. Role Responsibilities: Sole developer, designed the automation logic, built the VBA interface, and tested across all Mitsubishi specification variants. Tools: Microsoft Excel, VBA. Process Implemented a "portal" technique in VBA: a single master input cell combination drives synchronized updates across the proposal sheet, technical specification sheet, and pricing sheet simultaneously. Key Challenge: Preventing circular update loops, resolved by controlling event trigger sequences through Application.EnableEvents management. Results Eliminated redundant manual entry. Reduced proposal turnaround time significantly. Zero cross-document discrepancies after implementation.
 
-  Why: your private vault (01-Daily, 02-Projects) contains real client names,
-  project costs, and internal details. An AI trying to "safely summarize"
-  that into public content can miss something and leak it. A file you write
-  yourself can't leak anything you didn't choose to put in it.
 
-  You CAN ask Claude (in chat, or Lane B) to help you draft or improve the
-  wording below -- that's fine. Just always review what goes in here before
-  it goes live, the same way you'd review any other public-facing content
-  on your site.
--->
+IEEI AUTOCALC: Automated Costing & Estimation Tool
+An Excel/VBA tool for repeatable multi-story estimates and more consistent cost reporting.
+Context Problem: Preliminary cost estimation for multi-story projects required repetitive manual calculations across multiple document types with high risk of inconsistency. Client/Use: Developed in-house at IEEI during employment tenure for internal estimation workflows. Role Responsibilities: Sole developer, scoped requirements from daily estimation tasks, built the VBA logic, and validated outputs against manual calculations. Tools: Microsoft Excel, VBA. Process Built a unified estimation tool covering proposal generation, BOQ quantity take-offs, and preliminary budget output. User inputs project parameters; tool auto-generates itemized cost breakdowns. Key Challenge: Handling variable floor counts and unit types without breaking formula chains, solved with dynamic range logic. Results Standardized estimation output across the team. Reduced manual calculation time per proposal significantly.
 
-# About Me
 
-I'm a Registered Civil Engineer and Cost Control Engineer based in Taguig City, Philippines. My work sits at the intersection of structural design, cost estimation, and automation — I currently manage budget tracking, variance analysis, and cash flow reporting across a multi-project construction portfolio. I build Excel/VBA and Python tools for reporting and estimation workflows, and I'm a DOST-SEI Scholar under RA 7687.
+Project 448, RC Structural Analysis
+ETABS modeling and AutoCAD documentation for a reinforced-concrete building.
+I delivered the full structural analysis and documentation for a 4-story, 448 sqm mixed-use RC building. Completed during my contractual engagement at Alliance Textile Mills Inc., one of three structural projects I handled during that tenure. I modeled the full RC frame in ETABS per NSCP 2015 and ACI 318-14, with a complete AutoCAD drawing set, BOQ, and project schedule. My engagement concluded due to conflicting project direction. The building is now constructed.
 
-I'm open to engineering, estimation, and automation opportunities.
 
-# Skills
+Project Steel, Industrial Warehouse Structure
+Structural modeling and analysis of an industrial steel warehouse with gravity and lateral load cases.
+I delivered the full structural design for a 2,000 sqm single-story industrial steel warehouse, completed during the same Alliance Textile Mills engagement as Project 448. My scope covered framing, roof trusses, lateral bracing, foundations, and full compliance documentation per NSCP 2015 and AISC. Wind load analysis was the defining challenge, lateral pressures on the large open-plan structure required iterative bracing adjustments to satisfy drift limits. I delivered the full structural package with wind and seismic compliance verified.
 
-- **Structural design:** RC frame design, ETABS structural modeling, AutoCAD drafting, BOQ preparation. Code familiarity with NSCP 2015 and ACI 318-14.
-- **Cost control & estimation:** Budget monitoring, variance analysis, EAC forecasting, cash flow reporting, multi-story quantity take-offs.
-- **Scheduling:** Primavera P6, MS Project.
-- **Automation & dev tools:** Excel / VBA, Python, Odoo (XML-RPC), PlanSwift, Cubicost (TAS, TME), Bluebeam.
-- **Visualization & docs:** AutoCAD, SketchUp, Revit (working knowledge), Obsidian for personal knowledge management.
 
-# Project Types
+Project RLS, Multi-Story Residential Building
+ETABS modeling and structural drawing development for a multi-story residential building.
+I delivered the full structural design for RLS, a multi-story residential building, completed during the same Alliance Textile Mills engagement as Project 448 and the steel warehouse. I modeled the complete RC frame in ETABS per NSCP 2015 and ACI 318-14, and produced the full AutoCAD structural drawing set covering framing, columns, and unit layouts across all floors.
 
-- **Cost control dashboards** for active multi-project construction portfolios (budget vs actual, cash flow, EAC forecasting, variance analysis).
-- **Structural design and analysis** for residential and industrial projects — RC frames, seismic design, BOQ preparation.
-- **Cost estimation** for vertical-transport and multi-story building projects across a wide range of project values.
-- **Internal automation tools** — VBA macros for proposal/spec synchronization, Python scripts for PDF extraction and data pipelines.
-- **Knowledge tooling** — Obsidian-based personal knowledge management and AI-assisted workflow design.
 
-# Currently Learning / Work in Progress
+Thesis, Nonlinear Seismic Analysis: Three Resilience Techniques
+A five-story school study comparing seismic-response strategies through time-history analysis.
+Context Problem: Existing 5-story public school structure in Agoo, La Union lacked adequate seismic resilience documentation for Seismic Zone IV conditions. Client/Use: Academic thesis research, Technological Institute of the Philippines. Role Responsibilities: Designed and analyzed three independent seismic resilience systems, base isolation, buckling-restrained braces (BRBs), and steel-plate shear walls, and compared their performance using nonlinear time history analysis. Tools: ETABS, SAP2000, NSCP 2015, ASCE 7. Process Modeled the existing structure and applied each retrofit system independently. Ran nonlinear time history analysis using ground motion records scaled to site hazard levels. Evaluated inter-story drift, base shear, and floor acceleration responses across all three systems. Key Challenge: Calibrating nonlinear material properties for each system, required iterative pushover runs before committing to time history analysis. Results All three systems demonstrated measurable improvement over the unretrofitted baseline. Comparative findings documented per NSCP 2015 performance objectives.
 
-- Materials Engineer licensure review (PRC)
-- Master Plumber licensure review (PRC)
-- COSH (Construction Occupational Safety and Health) training
-- Second Brain And Civil Engineering Automation System
 
-# Frequently Asked Questions
+Project HELIO, Cost Control Intelligence System
+A dashboard linking budget versus actual costs, cash flow and expense monitoring.
+Context Problem: Managing cost control across 6 active construction packages on a active construction portfolio with no centralized visibility tool. Client/Use: Internal use, Millennium Erectors Corporation (client details confidential). Role Responsibilities: Self-initiated tool developed alongside core cost control duties, budget monitoring, variance analysis, EAC forecasting, and cash flow reporting. Tools: Microsoft Excel, VBA, Power Query. Process Built a dynamic dashboard that consolidates raw cost data across 6 project packages. Automated variance flagging using conditional logic. Integrated monthly cash flow projection with EAC tracking. Key Challenge: No standardized data input format, solved by building a preprocessing layer that normalizes inconsistent source data before analysis. Results Reduced weekly reporting prep from hours to minutes. Provided management with real-time budget health across all packages. All figures and project identifiers are withheld for confidentiality.
 
-**Q: What tools do you use?**
-A: For engineering work: ETABS, AutoCAD, STAAD, SAFE, SP Column, SketchUp, and Revit. For cost and scheduling: PlanSwift, Cubicost TAS/TME, Bluebeam, Primavera P6, MS Project. For automation: Excel VBA, Python, and Odoo via XML-RPC.
 
-**Q: Are you available for freelance or contract work?**
-A: Yes — open to engineering, estimation, and automation engagements. The Contact section on the site has my email and LinkedIn.
+Project QTO, Digital Quantity Take-offs
+PlanSwift material takeoffs to support estimation and quantity verification.
+Context Problem: Developing proficiency in digital quantity take-off workflows as part of professional estimation training. Client/Use: Academic and professional training exercise, project details withheld for confidentiality. Role Responsibilities: Full digital quantity take-off using PlanSwift, structural components, roofing, cladding, and foundations. Tools: PlanSwift, Microsoft Excel. Process Performed structured digital take-off from architectural and structural drawings. Organized quantities by CSI division. Exported to Excel for cost estimation. Key Challenge: Calibrating scale and handling overlapping structural layers, resolved through careful viewport management and layer isolation. Results Complete take-off package produced. Demonstrated accuracy against reference quantities.
 
-**Q: How can I contact you?**
-A: Best by email — see the Contact section on the site. I usually respond within 24 hours.
 
-**Q: Where are you based?**
-A: Taguig City, Philippines. Open to both on-site and remote work.
+Project BOQ, Estimation Workbook Audit & Repair
+Schema-based BOQ workbooks and estimation workflows for repeatable civil project planning.
+Context Problem: A comprehensive BOQ estimation workbook (earthworks through roof framing, rebar detailing, and steel schedules) had accumulated formula errors and inconsistent detailing logic across dozens of interconnected sheets, undermining confidence in the output quantities. Client/Use: Personal reference build used to standardize how I estimate structural quantities. Role Responsibilities: Full audit and repair, sole developer. Traced formula errors sheet by sheet, corrected detailing conventions against code, and rebuilt weak sheets as parametric calculators. Tools: Microsoft Excel, structural code references (NSCP 2015, ACI 318-14). Process Audited every sheet (earthworks, footing, column, beam, slab, wall footing, masonry, finishings, roof, schedules, BOQ, steel materials, lighting & fixtures) and fixed over 180 formula errors. Corrected rebar detailing logic to follow bar-diameter-proportional conventions instead of flat assumptions. Rebuilt the roof sheet as a parametric truss calculator and repaired subtotal gaps across the BOQ summary. Added a change log sheet to track every revision going forward. Results A workbook that now produces consistent, code-aligned quantities across every structural component, with a documented history of what changed and why. Current work also includes a Python BOQ builder: a canonical 24-sheet workbook schema, 17 divisions, an interactive build menu and schema validation.
 
-**Q: Do you have a PRC license?**
-A: Yes — Registered Civil Engineer (RCE), issued November 2025. Two more (Materials Engineer, Master Plumber) are in progress.
+
+PHAINON · Review Engine
+A self-built review engine for organizing Master Plumber study sessions and review cycles.
+Context Problem: Preparing for the MPLE board exam meant grinding through the same static reviewer PDFs and question sets repeatedly, with no structured way to track coverage or force real repetition over time. Client/Use: Personal study tool, built for my own MPLE and Materials Engineering review. Role Responsibilities: Sole developer. Designed the data pipeline, the cycle/draw logic, and the front-end review interface. Tools: Python for question-bank processing, HTML/CSS/JS for the local review engine. Process Built a local, file-based review engine that ingests structured question banks (currently 615 MPLE and Materials Engineering items) and serves them through a "cycle" system: draw a question, answer it, track completion percentage per cycle, and start a new cycle once the pool is exhausted. Filtering by module and category is supported so review sessions can be scoped narrowly instead of always drawing from everything. Results A self-contained, offline reviewer that turns board exam prep into a trackable, repeatable system instead of re-reading the same PDF and hoping something sticks.
+
+
+CV Data Extractor — Borderless PDF to Excel
+Python extraction of borderless voucher reports using layout positions and persistent date context.
+Context Problem: Check Voucher (CV) summary reports come out of the source system as text-based PDFs with no visible table gridlines, so standard table-extraction approaches fail. Manually retyping CV numbers, payees, and amounts into Excel was slow and error-prone. Client/Use: Internal tool for converting CV summary PDFs into itemized Excel data for reconciliation and record-keeping. Role Responsibilities: Sole developer. Designed the position-based parsing logic since there were no borders to key off of. Tools: Python, pdfplumber, pandas. Process Words are grouped into lines by vertical position rather than relying on table borders. Header rows are detected by keyword ("CV NUMBER", "AMOUNT", "CHECK"), and their word x-positions become column boundaries that every subsequent data row is bucketed against. Key Challenge: "DATE TRANS" headers are frequently separated from their table by a page break, so the script carries the current date forward continuously across pages until a new date header appears. Subtotal rows, blank rows, and wrapped headers are auto-skipped via pattern matching on the CV number format. Results Reliable extraction of Date Trans, CV Number, Payee, Gross Amount, and Net Amount from borderless PDFs directly into a clean Excel file, with zero manual retyping.
+
+
+Expense Monitoring Normalizer
+Python cleanup of inconsistent Excel expense sheets into a consistent reporting structure.
+Context Problem: The expense monitoring workbook is formatted for human presentation, one sheet per supplier, merged/grouped fields, subtotal and month-label rows scattered throughout, which makes it unusable for pivoting, dashboards, or any real analysis. Client/Use: Internal cost control tool to convert a presentation-formatted workbook into an analysis-ready dataset. Role Responsibilities: Sole developer. Reverse-engineered the fixed column layout directly from the live workbook and encoded it as a repeatable transform. Tools: Python, openpyxl, pandas. Process Each supplier sheet is located dynamically by its header row ("NO. OF DELIVER..."), and a fixed column-offset map is applied from that header row onward. Grouped fields (RR No., RR Date, PO No., Supplier Name) are blank on continuation rows in the source, so the script forward-fills them from the last group-start row. Subtotal rows, grand-total rows, month-label rows, and blank rows are all identified and stripped. The "Balance to Pay" total, which lives on its own row per sheet, is captured and broadcast onto every item row from that sheet so it survives the flattening. Output dates are coerced to real datetime values and the Excel output is written with proper number formatting and column widths. Results Every supplier sheet, however inconsistently it was formatted, is flattened into one normalized transactional table, ready for pivot tables, dashboards, or further automation.
+
+
+Engineering Tools Suite — Desktop App
+A modular Python/Tkinter desktop suite for endorsement tracking, document filing and office tasks.
+Context Problem: Tracking subcontractor endorsement progress, document filing, and office tasks was scattered across spreadsheets and verbal updates, with no shared source of truth and no history of who did what, when. Client/Use: Personal full-stack desktop tool, built as a modular suite rather than a single-purpose script. Role Responsibilities: Sole developer across the full stack: UI, application logic, and the database layer. Tools: Python, Tkinter/ttk for the UI, a shared local database for multi-user visibility, matplotlib and reportlab as optional integrations. Process Architected as a launcher-first suite (home.py) with independently runnable modules underneath, currently a Subcon Endorsement Progress Tracker (checklist-based project phases, per-item completion history with who/when, filterable project table, auto-refresh every 5 seconds so multiple users see near-live updates) and a Document Filing & Office Tickets module, with a Progress Billing module in development. Every user action is logged with attribution and timestamp rather than just a checkbox state. Optional features (PDF report export, time-based progress charts) degrade gracefully with a clear install prompt if their library isn't present, instead of crashing. A global exception handler catches and logs any unhandled error to a local log file so issues are diagnosable without a stack trace mid-meeting. Results A shared, near-live desktop system replacing informal tracking, with full action history, filterable views, and a launcher structure built to keep growing new modules without becoming unmanageable.
+
+
+Second Brain, Personal Knowledge Operating System
+An engineering knowledge system with cited retrieval, reviewed documentation and project context, built around a Markdown/Obsidian vault.
+The current architecture separates sources, knowledge notes, application tooling and runtime records. LifeOS provides interfaces for a local cited companion, research review, project monitoring and Librarian controls. Lane A prepares local project evidence; Lane B authors documentation through the configured cloud service. Review precedes creation or appending of knowledge. Source repositories remain outside the vault.
+Private diary content, personal records, protected sessions and credentials are excluded from the public portfolio.
+
+Pandarithm: Engineering Analysis & Design Platform
+Public Beta, Under Active Development and Verification
+A web-based engineering platform for more accessible, organized and repeatable structural analysis and design calculations.
+Project overview: Pandarithm combines my background in civil engineering with my interest in programming, numerical methods and engineering automation. Its modules cover beam analysis, truss analysis, reinforced concrete design, steel design and related workflows, with individual features at different stages of development and validation.
+My contribution: Project Creator, Engineering Logic Developer & Validation Lead. Developed engineering approaches, mathematical formulations, pseudocode and algorithm flowcharts, with AI-assisted coding supporting implementation, debugging and refinement. My role extends beyond defining software requirements: I translate engineering theory into computational procedures and check whether implemented calculations behave as intended.
+Engineering methodology: Understand the engineering problem: identify governing equations, assumptions, boundary conditions, inputs and expected outputs. Develop the calculation approach: derive or adapt mathematical expressions and establish pseudocode and the calculation sequence. Implement the logic: translate the approach into software, using AI-assisted coding where useful. Verify manually: solve representative problems independently and compare the results with the software. Benchmark the results: compare against established reference solutions and investigate discrepancies. Refine and retest: correct calculation, numerical precision and decimal-related errors identified during verification.
+Example: distributed-load analysis: One area of development involved extending beam calculations to handle different distributed-load configurations. I worked from the underlying structural equations to formulate a generalized calculation approach, rather than relying entirely on separate hardcoded expressions for each configuration. The objective was to support more flexible load representations while preserving consistent structural-analysis behavior.
+Verification and quality control: Engineering software must be evaluated on the correctness of its calculations, not simply whether it produces a result. I use independent manual solutions and benchmark comparisons to evaluate computational outputs. Where discrepancies appear, I investigate the calculations, including decimal precision, numerical implementation and the assumptions used in the comparison. This verification process remains ongoing.
+Current status and future direction: Pandarithm remains an actively developed public beta. My next priorities include expanding systematic test coverage, improving calculation traceability, refining engineering reports and validating individual modules before treating them as dependable design tools. The long-term objective is an engineering platform combining reliable calculations, understandable procedures and practical workflows for civil and structural engineering.
+Public beta under active development and verification. Individual features are at different stages of development and validation. The platform is not presented as fully validated or certified structural design software.

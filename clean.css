@@ -1,0 +1,44 @@
+/* Calm layout: game interaction without repeated frames. */
+.section{padding-top:76px;padding-bottom:76px}.section-heading h2{font-size:clamp(30px,3vw,40px);letter-spacing:-1.2px}.section-heading{margin-bottom:36px}.eyebrow{color:var(--muted);font-size:11px;letter-spacing:.12em}.section-heading h2:after{display:none}.world-map{background:none;border:0;border-radius:0;margin-top:20px;margin-bottom:0;border-bottom:1px solid var(--border)}.world-map a{border:0;font-weight:400;padding:20px 10px}.world-map b{font-size:13px}.world-map a:hover{background:none;color:var(--accent)}
+.about-layout{padding:0;border:0;border-radius:0;background:none;box-shadow:none;grid-template-columns:230px minmax(0,1fr);gap:48px}.about-card-label{display:none}.portrait{width:230px;height:320px;border:0;border-radius:4px}.about-copy .lead{font-size:22px;line-height:1.55}.about-copy>p{font-size:16px;line-height:1.85}.skill-block{background:none;border:0;border-top:1px solid var(--border);padding:20px 0 0;border-radius:0;gap:16px}.skill-block .tags span{border:0;background:none;padding:0 12px 0 0;font-size:14px}.identity-note span{border:0;background:none;padding:0;font-size:12px}.identity-note{gap:22px;color:var(--muted)}
+.quest-route{background:none;border:0;border-radius:0;padding:0 0 28px;margin-bottom:0;gap:22px}.quest-route:before{top:17px;height:1px;left:10%;right:10%}.quest-route a{font-size:14px;align-items:flex-start;text-align:left;gap:14px;background:var(--bg);width:fit-content;max-width:100%;padding-right:12px}.quest-route b{transform:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);box-shadow:none;font-size:13px}.quest-route .current b{border-color:var(--accent)}.quest-route span{font-weight:400}.quest-route .current span{font-weight:650;color:var(--accent)}.timeline{display:block;padding:0;border-top:1px solid var(--border);margin:0}.timeline:before,.timeline-item:before{display:none}.timeline-item,.timeline-item.current-role{position:relative;padding:36px 0 0;border:0;box-shadow:none;border-radius:0;background:none;max-width:850px;min-height:310px}.timeline-item[hidden]{display:none!important}.timeline-item:nth-child(even){margin-top:0}.role-index{display:none}.role-status{font-size:11px;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}.timeline-item .card-kicker{font-family:inherit;font-size:14px;letter-spacing:0}.timeline-item h3{font-size:28px;margin-top:22px}.timeline-item .company{font-size:16px;color:var(--accent)}.timeline-item>p:last-of-type{font-size:17px;line-height:1.85;max-width:75ch}.quest-reward{border:0;margin-top:22px;padding:0;font-size:14px;color:var(--muted)}.quest-reward span{display:none}
+.credential-grid{gap:0 40px}.credential{background:none;border:0;border-top:1px solid var(--border);border-radius:0;padding:24px 0;box-shadow:none}.credential h3{font-size:19px}.credential p{font-size:15px}.credential small{font-size:13px}.learning-panel{background:var(--surface);padding:32px;margin-top:30px;border:0;border-radius:8px;box-shadow:none}.learning-heading h3{font-size:26px}.learning-heading .eyebrow{display:none}.learning-heading>p:last-child{font-size:15px;color:var(--muted)}.learning-grid{gap:0 30px}.learning-grid article{padding:22px 0;border:0;border-top:1px solid var(--border);background:none;border-radius:0}.study-status{padding:0;border:0;background:none;color:var(--muted);font-size:11px;letter-spacing:.06em}.learning-grid h4{font-size:18px;margin-top:10px}.learning-grid p{font-size:15px}.learning-grid small{font-size:13px}.program-note{font-size:13px;color:var(--muted)}
+.project-card{border:1px solid var(--border);border-radius:8px;box-shadow:none}.project-media{border-radius:7px 7px 0 0}.tags span{border:0;padding:0;background:none;margin-right:9px;font-family:inherit;font-size:12px}.status{font-family:inherit;font-size:12px;color:var(--muted)}.project-card h3,.project-grid .project-card h3{font-size:20px}.card-summary{font-size:15px}.focus-grid article{background:none;border:0;border-left:1px solid var(--border);border-radius:0;padding:8px 24px}.contact-section{border-top:1px solid var(--border)}
+@media(max-width:800px){.about-layout{grid-template-columns:180px minmax(0,1fr);gap:30px}.portrait{width:180px;height:260px}.timeline{padding:0}.quest-route a{font-size:12px}.timeline-item,.timeline-item.current-role{padding-top:28px}.world-map{grid-template-columns:repeat(3,minmax(0,1fr))}.world-map a:last-child{grid-column:auto}.timeline-item h3{font-size:25px}}
+@media(max-width:650px){.section{padding:48px 20px}.about-layout{grid-template-columns:1fr;gap:26px}.portrait{width:160px;height:220px}.about-copy .lead{font-size:21px}.learning-panel{padding:24px}.quest-route{grid-template-columns:1fr 1fr;gap:24px}.quest-route:before{display:none}.quest-route a{font-size:13px;width:auto}.timeline-item>p:last-of-type{font-size:16px}.world-map{grid-template-columns:1fr 1fr}.learning-grid{grid-template-columns:1fr}.focus-grid article:last-child{border:0;border-left:1px solid var(--border);padding:8px 24px}}
+
+/* All career entries remain visible; only the scenery suggests a quest map. */
+#experience{position:relative;isolation:isolate;overflow:hidden}
+#experience:before{content:'';position:absolute;inset:120px 0 20px;z-index:-1;pointer-events:none;background:url("assets/img/quest-terrain.svg") center/100% 100% no-repeat;opacity:.14}
+.timeline{position:relative;padding:10px 0 0 50px;border:0;display:grid;grid-template-columns:1fr;gap:36px}
+.timeline:before{content:'';display:block;position:absolute;left:15px;top:40px;bottom:60px;border-left:2px dashed var(--accent);opacity:.45}
+.timeline-item,.timeline-item.current-role{display:block!important;padding:0 0 30px;min-height:0;max-width:900px;border-bottom:1px solid var(--border);background:none}
+.timeline-item:before,.timeline-item:nth-child(even):before{content:'';display:block;position:absolute;left:-42px;right:auto;top:6px;width:14px;height:14px;border:2px solid var(--accent);background:var(--bg);border-radius:4px;transform:rotate(45deg)}
+.timeline-item.current-role:before{background:var(--accent)}
+.timeline-item h3{margin-top:16px}.timeline-item:last-child{border-bottom:0;padding-bottom:0}
+@media(max-width:650px){.timeline{padding-left:32px;gap:28px}.timeline:before{left:7px}.timeline-item:before,.timeline-item:nth-child(even):before{left:-32px;width:12px;height:12px}.timeline-item h3{font-size:23px}#experience:before{opacity:.1}}
+
+/* Review refinements: touch targets, dialog containment and clear project actions. */
+body:has(dialog[open]){overflow:hidden}
+.filter,.text-button,.mode-switch button{min-height:44px}
+.search-box input{min-height:44px}
+.project-art span{max-width:90%;line-height:1.5}
+@media(max-width:650px){.filters{gap:8px}.filter{font-size:12px;padding:10px 12px}.contact-links a{min-height:44px;display:inline-flex;align-items:center}.view-controls select{min-height:38px}}
+@media print{.site-header,.view-controls,.floating-companion,.companion-button,.world-map,#portfolioSweep{display:none!important}body{background:white;color:#222}#experience:before{display:none}.timeline-item{break-inside:avoid}.section{padding-top:24px;padding-bottom:24px}}
+/* Featured work leads; the complete catalogue stays available as a quiet archive. */
+#projectGrid .project-card{display:grid;grid-template-columns:130px minmax(0,1fr);border:0;border-top:1px solid var(--border);border-radius:0;background:none;padding:22px 0;align-items:start}
+#projectGrid .project-card[hidden]{display:none!important}
+#projectGrid .project-media{height:105px;border:0;border-radius:4px;margin-top:4px}
+#projectGrid .project-info{padding:0 0 0 20px}
+#projectGrid .project-art span{display:none}
+#projectGrid .project-art svg{width:100%}
+#projectGrid .card-kicker{font-size:10px;font-family:inherit;color:var(--muted)}
+#projectGrid h3{font-size:18px;margin:7px 0}
+#projectGrid .card-summary{font-size:14px;line-height:1.7}
+#projectGrid .tags{margin-top:12px}
+#projectGrid .status{padding-top:10px;margin-top:10px;border:0}
+#projectGrid .text-button{font-size:13px}
+.project-grid{grid-template-columns:1fr 1fr;gap:0 34px}
+.featured-grid .project-media{height:210px}.featured-grid .project-media img{object-fit:cover;object-position:top}
+@media(max-width:800px){.project-grid{grid-template-columns:1fr}.featured-grid .project-media{height:190px}}
+@media(max-width:420px){#projectGrid .project-card{grid-template-columns:85px minmax(0,1fr)}#projectGrid .project-media{height:78px}#projectGrid .project-info{padding-left:14px}}

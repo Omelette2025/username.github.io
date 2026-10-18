@@ -1,0 +1,99 @@
+.creative-kicker,.explorer-bar{display:none}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+body[data-mode="personalized"] .creative-kicker{display:block;font:11px ui-monospace,monospace;letter-spacing:.14em;color:var(--hero-accent);margin-bottom:24px}
+body[data-mode="personalized"] .explorer-bar{max-width:1160px;margin:28px auto 0;display:flex;align-items:center;gap:22px;padding:14px 0;border-bottom:1px solid var(--border);font:11px ui-monospace,monospace;letter-spacing:.05em;color:var(--muted)}.explorer-bar b{color:var(--accent);margin-left:8px}.explorer-bar button{color:var(--accent);background:none;border:1px solid var(--border);padding:8px 12px}.explorer-bar #unlockNotice{margin-left:auto}
+body[data-mode="personalized"] .hero h1{font-family:ui-monospace,"Courier New",monospace;letter-spacing:-3px;text-shadow:3px 3px 0 #235432}body[data-mode="personalized"] .hero-role{letter-spacing:.16em}
+body[data-mode="personalized"] .section-heading .eyebrow:before{content:'► ';color:var(--accent)}body[data-mode="personalized"] .world-map a:hover{color:var(--accent);text-decoration:none;background:var(--surface)}body[data-mode="personalized"] .featured-grid .project-card{border-radius:2px;border-top:3px solid var(--accent)}body[data-mode="personalized"] .timeline-item h3{font-family:ui-monospace,monospace;font-size:24px}body[data-mode="personalized"] .portrait{border:2px solid var(--accent);box-shadow:8px 8px 0 var(--surface2)}
+.ajaw-chat{width:min(480px,calc(100vw - 24px));max-height:min(680px,calc(100dvh - 36px));padding:0;border-radius:10px;background:var(--surface);border:1px solid var(--accent)}.ajaw-chat-header{padding:22px;border-bottom:1px solid var(--border);position:relative}.ajaw-chat h2{font:700 25px ui-monospace,monospace;color:var(--accent)}.ajaw-chat h2 span{display:block;font:13px 'Segoe UI',sans-serif;color:var(--muted);margin-top:6px}.ajaw-chat .dialog-close{top:14px;right:14px}.ajaw-messages{height:300px;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:18px}.chat-message{max-width:94%;padding:14px;background:var(--surface2);border-left:2px solid var(--accent)}.chat-message.user{align-self:flex-end;border-left:0;border-right:2px solid var(--border);background:none}.chat-message strong{font:10px ui-monospace,monospace;color:var(--accent)}.chat-message p{font-size:14px;line-height:1.7;white-space:pre-wrap;margin-top:6px}.ajaw-chat .guide-options{padding:12px 20px;margin:0;border-top:1px solid var(--border);gap:8px}.ajaw-chat .guide-options button{font-size:12px;padding:8px 10px;background:none}.ajaw-chat form{display:flex;gap:8px;padding:12px 20px}.ajaw-chat input{min-width:0;flex:1;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:12px;font-size:14px}.ajaw-chat form button{background:var(--accent);color:var(--button-text);border:0;padding:10px 14px}.chat-foot{padding:0 20px 16px;font-size:10px;color:var(--muted)}
+@media(max-width:650px){body[data-mode="personalized"] .explorer-bar{margin:20px;flex-wrap:wrap;gap:12px}.explorer-bar #unlockNotice{width:100%;margin:0}.ajaw-messages{height:260px}body[data-mode="personalized"] .hero h1{letter-spacing:-2px}body[data-mode="personalized"] .timeline-item h3{font-size:21px}}
+@media print{.explorer-bar,.creative-kicker{display:none!important}}
+.ajaw-messages{align-items:stretch}.ajaw-messages .chat-message{display:block;position:static;width:100%;max-width:100%;min-width:0;flex-shrink:0;white-space:normal}.ajaw-messages .chat-message p{display:block;width:auto;max-width:none;min-width:0;word-break:normal;overflow-wrap:anywhere;letter-spacing:normal}.ajaw-chat h2 span{letter-spacing:normal;line-height:1.5}.ajaw-chat .chat-message.user{width:auto;max-width:90%}
+.ajaw-messages .chat-message{height:auto;min-height:0;float:none;transform:none}.ajaw-messages .chat-message strong{display:block}.ajaw-messages .chat-message.user{text-align:right}.ajaw-chat{overflow:hidden}
+
+.chat-project-link{display:block;margin-top:12px;padding:8px 12px;background:none;color:var(--accent);border:1px solid var(--border);font-size:13px}.ajaw-chat form button:disabled{opacity:.5;cursor:wait}
+
+/* Live original identity: forest / gold, bold type, a free-standing dragon. */
+body[data-mode="personalized"] .creative-kicker{display:none}
+body[data-mode="personalized"] .hero h1{font-family:"Segoe UI",Arial,sans-serif;font-weight:850;letter-spacing:-2px;text-shadow:none}
+body[data-mode="personalized"] .hero-intro,body[data-mode="personalized"] .hero-copy{display:none}
+body[data-mode="personalized"] .hero .eyebrow{display:inline-flex;border:1px solid var(--border);border-radius:30px;padding:7px 14px;font-family:"Segoe UI",Arial,sans-serif;letter-spacing:.07em;font-size:11px;margin-bottom:30px}
+body[data-mode="personalized"] .hero-role{color:#e6cc54;margin-top:18px;font-size:13px;font-weight:650}
+body[data-mode="personalized"] .hero{min-height:700px;padding-top:100px;background-image:linear-gradient(rgba(68,139,78,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(68,139,78,.04) 1px,transparent 1px);background-size:48px 48px}
+body[data-mode="personalized"] .arcade-stats{border-radius:14px;border-color:var(--border);background:transparent;margin-top:34px}
+body[data-mode="personalized"] .hero-actions{margin-top:32px}
+body[data-mode="personalized"] .floating-companion{border:0;background:none;box-shadow:none;bottom:82px;right:24px;padding:0}
+body[data-mode="personalized"] .floating-companion .companion-label{display:none}
+body[data-mode="personalized"] .portrait{border:1px solid #807339;border-radius:14px;box-shadow:none}
+body[data-mode="personalized"] .timeline-item h3{font-family:"Segoe UI",Arial,sans-serif}
+body[data-mode="personalized"] .identity-note span{border:1px solid var(--border);border-radius:24px;padding:4px 10px}
+body[data-mode="personalized"] .section{background-image:linear-gradient(rgba(68,139,78,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(68,139,78,.025) 1px,transparent 1px);background-size:48px 48px}
+body[data-mode="personalized"] .section-heading .eyebrow{color:#9ca67d}
+@media(max-width:650px){body[data-mode="personalized"] .hero{padding-top:70px;min-height:620px}body[data-mode="personalized"] .hero-role{font-size:11px}body[data-mode="personalized"] .floating-companion{right:12px;bottom:68px}}
+
+/* Preserve three worlds; keep the scenery lightweight during the wipe. */
+#portfolioSweep{will-change:transform;contain:strict;pointer-events:none}
+body[data-switching="true"] .companion-sprite{animation-play-state:paused!important}
+body[data-mode="personalized"][data-template="coding"] .hero-role{color:#b5d9e2}
+body[data-mode="personalized"][data-template="costing"] .hero-role{color:#e1c875}
+body[data-mode="personalized"][data-template="coding"] .hero{background-image:none}
+body[data-mode="personalized"][data-template="costing"] .hero{background-size:80px 80px}
+
+/* Theme scenery stays behind content and never intercepts input. */
+body[data-mode="personalized"] main{position:relative;isolation:isolate}
+body[data-mode="personalized"] main:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:url('assets/img/arcade-scene.svg');background-repeat:repeat-y;background-size:100% 900px;opacity:.07}
+body[data-mode="personalized"][data-template="coding"] main:before{background-image:url('assets/img/cloud-scene.svg');opacity:.075}
+body[data-mode="personalized"][data-template="costing"] main:before{background-image:url('assets/img/cosmos-scene.svg');opacity:.085}
+body[data-mode="personalized"] .section{background-image:none}
+body[data-mode="personalized"][data-template="coding"] #experience:before,body[data-mode="personalized"][data-template="costing"] #experience:before{display:none}
+@media(max-width:650px){body[data-mode="personalized"] main:before{background-size:760px 650px;background-position:center top;opacity:.045}body[data-mode="personalized"][data-template="coding"] main:before,body[data-mode="personalized"][data-template="costing"] main:before{opacity:.05}}
+@media print{main:before{display:none!important}}
+
+/* Civil engineering language, expressed through each existing theme. */
+body[data-mode="professional"] main{position:relative;isolation:isolate}
+body[data-mode="professional"] main:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('assets/img/ce-bamboo-scene.svg') center top/100% 900px repeat-y;opacity:.09}
+body[data-mode="professional"] .section-heading .eyebrow{color:#47644c;letter-spacing:.12em}
+body[data-mode="professional"] .section-heading{position:relative;padding-left:20px;border-left:2px solid var(--accent)}
+body[data-mode="professional"] .hero-role{letter-spacing:.12em}
+body[data-mode="professional"] .arcade-stats{border-radius:4px}
+body[data-mode="professional"] .project-card{border-radius:3px;border-top:2px solid var(--accent)}
+body[data-mode="professional"] .world-map b{font-family:ui-monospace,monospace}
+.theme-context{font:11px/1.7 ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);margin-top:16px}
+body[data-mode="professional"] .companion-label{font-size:12px}
+.panda-mark{display:inline-block;font-size:18px;margin-right:7px;vertical-align:middle}
+body[data-mode="personalized"] .panda-mark{display:none}
+@media(max-width:650px){body[data-mode="professional"] main:before{opacity:.055;background-size:760px 650px}.theme-context{font-size:10px;letter-spacing:.025em}}
+
+/* Each theme has its own architectural / playful scenery. */
+body[data-mode="professional"] main:before{opacity:.075}
+body[data-mode="personalized"][data-template="all"] main:before{opacity:.07}
+body[data-mode="personalized"][data-template="coding"] main:before{opacity:.075}
+body[data-mode="personalized"][data-template="costing"] main:before{opacity:.075}
+@media(max-width:650px){body[data-mode="professional"] main:before,body[data-mode="personalized"] main:before{opacity:.045}}
+
+
+/* Theme scenery follows the viewport edges, outside the reading column. */
+body{--scene:url('assets/img/ce-bamboo-motif.svg')}
+body[data-mode="personalized"]{--scene:url('assets/img/arcade-motif.svg')}
+body[data-mode="personalized"][data-template="coding"]{--scene:url('assets/img/cloud-motif.svg')}
+body[data-mode="personalized"][data-template="costing"]{--scene:url('assets/img/cosmos-motif.svg')}
+body[data-mode="personalized"] main:before{display:none}
+body[data-mode="professional"] main:before{display:block;content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('assets/img/panda-waves.svg') center top/100% 1000px repeat-y;opacity:.6}
+.section{position:relative;isolation:isolate;padding-bottom:80px}
+.section:after{content:'';position:absolute;pointer-events:none;z-index:-1;width:155px;height:230px;right:calc((1160px - 100vw)/2 + 12px);top:35%;background:var(--scene) center/contain no-repeat;opacity:.48}
+.section:nth-of-type(even):after{left:calc((1160px - 100vw)/2 + 12px);right:auto}
+#experience:before{display:none!important}
+#experience:after{height:230px;top:30%}
+.ce-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}
+body[data-mode="personalized"] .hero-copy{display:block;max-width:650px;margin-top:24px}
+main{overflow-x:clip}
+@media(max-width:1250px){.section:after{width:95px;height:145px;right:-12px;top:0;opacity:.22}.section:nth-of-type(even):after{left:-12px}#experience:after{height:145px;top:0}}
+@media(max-width:650px){.ce-showcase{grid-template-columns:1fr}.section:after{width:70px;height:105px;opacity:.2}.section{padding-bottom:64px}}
+@media print{main:before,.section:after{display:none!important}}
+
+/* Hero worlds: static vector scenery, with a clear center for the introduction. */
+body[data-mode="personalized"] .hero{background-image:none}
+body[data-mode="personalized"] .hero-decoration{inset:0;width:auto;height:auto;border:0;border-radius:0;background-position:center;background-size:100% 100%;background-repeat:no-repeat;opacity:.45}
+body[data-mode="personalized"][data-template="all"] .hero-decoration{background-image:url('assets/img/arcade-hero.svg')}
+body[data-mode="personalized"][data-template="costing"] .hero-decoration{background-image:url('assets/img/cosmos-hero.svg');opacity:.55}
+body[data-mode="personalized"][data-template="coding"] .hero-decoration{background-image:url('assets/img/cloud-hero.svg');opacity:.55}
+@media(max-width:650px){body[data-mode="personalized"] .hero-decoration{background-size:auto 100%;opacity:.24}body[data-mode="personalized"][data-template="costing"] .hero-decoration{background-position:72% center;opacity:.25}body[data-mode="personalized"][data-template="coding"] .hero-decoration{background-size:100% 100%;opacity:.38}}
+body[data-mode="personalized"][data-template] .hero-decoration{inset:0;width:auto;height:auto;border:0;border-radius:0;background-size:100% 100%;background-position:center} @media(max-width:650px){body[data-mode="personalized"][data-template] .hero-decoration{background-size:auto 100%}body[data-mode="personalized"][data-template="coding"] .hero-decoration{background-size:100% 100%}body[data-mode="personalized"][data-template="costing"] .hero-decoration{background-position:72% center}}

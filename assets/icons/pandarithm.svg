@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+<title id="title">Pandarithm — panda and structural bridge emblem</title>
+<circle cx="64" cy="64" r="60" fill="#17392e"/>
+<circle cx="64" cy="64" r="53" fill="#f5f7f1"/>
+<g fill="#17392e"><circle cx="37" cy="37" r="13"/><circle cx="91" cy="37" r="13"/><path d="M29 60C29 38 44 27 64 27s35 11 35 33c0 22-15 32-35 32S29 82 29 60Z"/></g>
+<path d="M35 60c0-18 12-27 29-27s29 9 29 27c0 18-12 26-29 26S35 78 35 60Z" fill="#f5f7f1"/>
+<g fill="#17392e"><ellipse cx="49" cy="58" rx="9" ry="12" transform="rotate(28 49 58)"/><ellipse cx="79" cy="58" rx="9" ry="12" transform="rotate(-28 79 58)"/><path d="M57 73q7-5 14 0l-7 7Z"/></g>
+<g fill="#f5f7f1"><circle cx="50" cy="56" r="2.5"/><circle cx="78" cy="56" r="2.5"/></g>
+<path d="M25 93h78M33 93l15 15 16-15 16 15 15-15M48 108h32" fill="none" stroke="#17392e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,1 @@
+(()=>{document.getElementById('gatePersonalized')?.click();document.getElementById('navProfessional')?.addEventListener('click',e=>{e.preventDefault();e.stopImmediatePropagation();location.href='../index.html'},true);})();
