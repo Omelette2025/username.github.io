@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
+<title id="title">Confidential panda</title><desc id="desc">A panda wearing green headphones holds a closed lock to protect private project information.</desc>
+<rect width="480" height="300" rx="24" fill="#f0f3eb"/>
+<circle cx="240" cy="142" r="106" fill="#e2eadb"/>
+<circle cx="182" cy="74" r="25" fill="#20372b"/><circle cx="298" cy="74" r="25" fill="#20372b"/>
+<path d="M159 127c0-96 162-96 162 0" fill="none" stroke="#718c66" stroke-width="15" stroke-linecap="round"/>
+<path d="M154 151c0-43 27-74 86-74s86 31 86 74c0 35-31 52-86 52s-86-17-86-52Z" fill="#fffef8" stroke="#20372b" stroke-width="3.5"/>
+<ellipse cx="205" cy="141" rx="21" ry="15" transform="rotate(-25 205 141)" fill="#20372b"/><ellipse cx="275" cy="141" rx="21" ry="15" transform="rotate(25 275 141)" fill="#20372b"/>
+<path d="M234 153q6-4 12 0l-6 7Z" fill="#20372b"/><path d="M240 160v5m0 0-5 4m5-4 5 4" stroke="#20372b" stroke-width="3" stroke-linecap="round"/>
+<rect x="147" y="117" width="17" height="44" rx="8" fill="#718c66" stroke="#20372b" stroke-width="3"/><rect x="316" y="117" width="17" height="44" rx="8" fill="#718c66" stroke="#20372b" stroke-width="3"/>
+<path d="M218 205v-16a22 22 0 0 1 44 0v16" fill="none" stroke="#20372b" stroke-width="9"/>
+<rect x="201" y="199" width="78" height="62" rx="13" fill="#718c66" stroke="#20372b" stroke-width="3"/>
+<circle cx="240" cy="223" r="6" fill="#fffef8"/><path d="M240 227v12" stroke="#fffef8" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="195" cy="220" rx="13" ry="19" transform="rotate(-25 195 220)" fill="#20372b"/><ellipse cx="285" cy="220" rx="13" ry="19" transform="rotate(25 285 220)" fill="#20372b"/>
+</svg>

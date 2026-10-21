@@ -1,0 +1,22 @@
+/* Shared readable surfaces for every personalized world and newer components. */
+body{--paper:var(--surface);--ink:var(--text)}
+body[data-mode="personalized"]{color-scheme:dark;--bg:#101c17;--surface:#17271f;--surface2:#22362a;--text:#f4f7ed;--muted:#c0cfbc;--accent:#b5dc96;--hero-accent:var(--accent);--button-text:#142319;--border:#60745e}
+body[data-mode="personalized"][data-template="coding"]{--bg:#132530;--surface:#1c3341;--surface2:#294552;--text:#f1f8fa;--muted:#c3d9df;--accent:#b4e2ed;--button-text:#102a35;--border:#6b8792}
+body[data-mode="personalized"][data-template="costing"]{--bg:#201b2b;--surface:#2b253b;--surface2:#39304b;--text:#faf3ff;--muted:#d8cae4;--accent:#e6c3fa;--button-text:#2a1835;--border:#8b789d}
+body[data-mode="personalized"] :is(dialog,.project-video-dialog){background:var(--surface);color:var(--text);border-color:var(--border)}
+body[data-mode="personalized"] :is(.evolution-inputs li,.evolution-marker){background:var(--surface);color:var(--text);border-color:var(--border)}
+body[data-mode="personalized"] .evolution-current .evolution-marker{background:var(--accent);color:var(--button-text);border-color:var(--accent)}
+body[data-mode="personalized"] :is(.evolution-inputs,.evolution-stage:not(:last-child):before){border-color:var(--border)}
+body[data-mode="personalized"] .evolution-stage:not(:last-child):before{background:var(--border)}
+body[data-mode="personalized"] .video-playlist button[aria-pressed="true"]{background:var(--accent);color:var(--button-text)}
+body[data-mode="personalized"] :is(input:not([type="checkbox"]):not([type="radio"]),textarea,select,option){background:var(--surface);color:var(--text);border-color:var(--border)}
+body[data-mode="personalized"] ::placeholder{color:var(--muted);opacity:1}
+body[data-mode="personalized"] :is(button,a,input,select,textarea,summary):focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+body[data-mode="personalized"] :is(.edge-squiggles,.rail-squiggles){opacity:.08}
+body[data-mode="personalized"] .project-status{color:var(--muted)}
+html[data-contrast="high"] body[data-mode="personalized"]{--bg:#090f0c;--surface:#101a14;--surface2:#1a2920;--text:#fff;--muted:#eef4e9;--accent:#d3fbb8;--button-text:#09150b;--border:#b5c9af}
+
+body[data-mode="personalized"] .floating-companion .companion-label{display:none!important}
+#supporting .project-lineage .evolution-heading h3{font-size:clamp(26px,3vw,34px);line-height:1.2}
+
+.media-withheld .panda-confidential{display:block;width:min(100%,240px);height:auto;max-height:140px;object-fit:contain;border-radius:12px}.project-grid .media-withheld .panda-confidential{width:100%;max-height:65px;border-radius:6px}.case-media-notice>.panda-confidential{display:block;width:min(100%,360px);height:auto;margin:0 auto 20px;border-radius:14px}

@@ -62,7 +62,7 @@
     const query = document.getElementById('projectSearch').value.trim().toLowerCase();
     let count = 0;
     document.querySelectorAll('#projectGrid .project-card').forEach(card => {
-      const matches = (activeFilter === 'all' || card.dataset.cat === activeFilter) && card.dataset.search.includes(query);
+      const matches = (activeFilter === 'all' || (card.dataset.categories || card.dataset.cat).split(' ').includes(activeFilter)) && card.dataset.search.includes(query);
       card.hidden = !matches; if (matches) count++;
     });
     document.getElementById('resultCount').textContent = `Showing ${count} of ${data.projects.length} projects`;
@@ -99,12 +99,12 @@
     return `<h3>Workflow</h3><p>${esc(text)}</p>`;
   }
   function openProject(id) {
-    const p=projects.get(id); if(!p)return; openedProject=p;
-    const gallery=p.images.length ? `<div class="case-gallery">${p.images.map(image=>`<div><img src="${esc(image.src)}" alt="${esc(image.alt)}" loading="lazy"><a href="${esc(image.src)}" target="_blank" rel="noopener noreferrer">Open image</a></div>`).join('')}</div>` : '';
-    document.getElementById('dialogContent').innerHTML = `<p class="eyebrow">${esc(data.categories[p.cat])}</p><h2 id="dialogTitle">${esc(p.title)}</h2><p class="dialog-meta">${esc(p.meta)} · ${esc(p.status)}</p><p>${esc(p.summary)}</p>${gallery}${paragraphSections(p)}${p.contributions.length?`<h3>Key contributions</h3><ul>${p.contributions.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${p.scope?`<p class="case-scope">${esc(p.scope)}</p>`:''}<div class="brief-actions"><button class="button primary" id="downloadBrief">Download project brief</button><a href="#contact" id="discussProject">Discuss this work</a></div>`;
+    id=data.projectAliases?.[id]||id; const p=projects.get(id); if(!p)return; openedProject=p;
+    const gallery=p.images.length ? `<div class="case-gallery">${p.images.map(image=>`<div><img src="${esc(image.src)}" alt="${esc(image.alt)}" loading="lazy"><p class="image-caption">${esc(image.caption||image.alt)}</p><a href="${esc(image.src)}" target="_blank" rel="noopener noreferrer">Open image</a></div>`).join('')}</div>` : p.mediaKind==="progress" ? `<div class="case-progress"><img src="assets/img/panda-progress.svg" alt="Panda-themed work in progress illustration" width="640" height="400"><p>${esc(p.mediaNote)}</p></div>` : `<div class="case-media-notice">${p.mediaNotice==="Confidential"?`<img class="panda-confidential" src="assets/img/panda-confidential.svg" alt="Headphone panda holding a closed lock" width="480" height="300">`:""}<strong>${esc(p.mediaNotice||"Preview unavailable")}</strong><p>${esc(p.mediaNote||"No public screenshot is available yet.")}</p></div>`;
+    document.getElementById('dialogContent').innerHTML = `<p class="eyebrow">${esc(data.categories[p.cat])}</p><h2 id="dialogTitle">${esc(p.title)}</h2><p class="dialog-meta">${esc(p.meta)} · ${esc(p.status)}</p><p>${esc(p.summary)}</p>${gallery}${paragraphSections(p)}${p.contributions.length?`<h3>Key contributions</h3><ul>${p.contributions.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${p.scope?`<p class="case-scope">${esc(p.scope)}</p>`:''}<div class="brief-actions">${p.live?`<a class="button" href="${esc(p.live)}" target="_blank" rel="noopener noreferrer">${esc(p.liveLabel||"Launch application")} <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a>`:""}<button class="button primary" id="downloadBrief">Download project brief</button><a href="#contact" id="discussProject">Discuss this work</a></div>`;
     document.getElementById('downloadBrief').addEventListener('click',()=>downloadBrief(p));
     document.getElementById('discussProject').addEventListener('click',()=>dialog.close());
-    dialog.showModal();dialog.scrollTop=0;
+    dialog.showModal();dialog.scrollTop=0;window.dispatchEvent(new CustomEvent("portfolio-project-open",{detail:{id}}));
   }
   document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>openProject(button.dataset.open)));
   document.getElementById('closeDialog').addEventListener('click',()=>dialog.close());

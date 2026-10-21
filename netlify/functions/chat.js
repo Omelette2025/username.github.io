@@ -30,6 +30,10 @@ exports.handler = async function (event) {
     return { statusCode: 400, body: "Missing 'message' field" };
   }
 
+  if (!process.env.GEMINI_API_KEY) {
+    return { statusCode: 503, headers: { "Content-Type": "application/json" }, body: JSON.stringify({ error: "Extended chat is not configured. Portfolio answers remain available." }) };
+  }
+
   let publicBrain = "";
   try {
     publicBrain = fs.readFileSync(

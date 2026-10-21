@@ -1,0 +1,5 @@
+{
+  "name": "ruzzel-engineering-portfolio",
+  "private": true,
+  "scripts": {"build": "node scripts/build.mjs", "preview": "node scripts/preview.mjs"}
+}

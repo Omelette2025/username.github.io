@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <title>Panda with headphones</title>
+  <g fill="#172d23" stroke="#172d23" stroke-width="5">
+    <circle cx="34" cy="31" r="15"/>
+    <circle cx="94" cy="31" r="15"/>
+    <path d="M24 65c0-28 16-44 40-44s40 16 40 44c0 27-16 43-40 43S24 92 24 65Z" fill="#fffdf6"/>
+  </g>
+  <g fill="#172d23">
+    <ellipse cx="46" cy="63" rx="12" ry="16" transform="rotate(25 46 63)"/>
+    <ellipse cx="82" cy="63" rx="12" ry="16" transform="rotate(-25 82 63)"/>
+    <path d="M57 82q7-5 14 0l-7 7Z"/>
+  </g>
+  <g fill="#fffdf6"><circle cx="48" cy="60" r="3.5"/><circle cx="80" cy="60" r="3.5"/></g>
+  <path d="M55 92q9 8 18 0" stroke="#172d23" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M16 68V53C16 24 36 10 64 10s48 14 48 43v15" stroke="#172d23" stroke-width="12" stroke-linecap="round"/>
+  <path d="M19 49C20 25 38 14 64 14s44 11 45 35" stroke="#83b793" stroke-width="4" stroke-linecap="round"/>
+  <rect x="7" y="53" width="21" height="35" rx="9" fill="#416747" stroke="#172d23" stroke-width="5"/>
+  <rect x="100" y="53" width="21" height="35" rx="9" fill="#416747" stroke="#172d23" stroke-width="5"/>
+  <path d="M15 63v15M113 63v15" stroke="#a6c6a5" stroke-width="3" stroke-linecap="round"/>
+</svg>
