@@ -108,3 +108,5 @@ Engineering Tools Suite → PDF-to-Excel extraction → MEC Cost Control Suite, 
 Second Brain → Life OS → Life OS with project review, documentation and agent-assisted workflows.
 
 Approximate project-history dates: the creator said initial drafting began around April; the portfolio uses around April 2026, followed by ongoing overlapping iteration and present development. Individual stage months are not established.
+
+Recruitment: six supplied resume versions are available in the Resume section: General Civil Engineer (default), Junior Structural Engineer, Graduate Engineer, Cost Engineer / Cost Control, Quantity Surveyor / Cost Estimator, and Civil Engineering + Automation. Disciplines: Structural Engineering, Cost Engineering & Quantity Surveying, Engineering Automation.

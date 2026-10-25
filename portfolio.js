@@ -42,8 +42,8 @@
     document.getElementById('personal').hidden = mode === 'professional';
     document.querySelector('.personal-copy').hidden = mode === 'professional';
     document.getElementById('heroCopy').textContent = mode === 'professional'
-      ? 'Structural understanding, cost awareness and practical automation—in one civil engineering portfolio.'
-      : 'Civil engineer first. Structures, cost control and tools that make the work better.';
+      ? 'Registered Civil Engineer with experience in structural modeling and analysis, construction cost management and estimation. I also develop engineering software and automation workflows, with verification and review appropriate to each project.'
+      : 'Civil engineer first. I connect structural understanding, cost awareness and practical automation, and keep the assumptions and review limits visible.';
     document.querySelector('.hero .availability-note').lastChild.textContent = mode==='personalized'?'Structures, costs & useful tools':'Structures · Cost · Automation';
     setTheme(body.dataset.template);store('portfolio-mode', mode);
   }
@@ -58,8 +58,11 @@
   setMode(load('portfolio-mode') === 'personalized' ? 'personalized' : 'professional');
   body.dataset.effects = load('portfolio-effects') === 'gentle' ? 'gentle' : 'quiet';
   effectsSelect.value = body.dataset.effects;
+  const categoryPriority={structural:['pandarithm','legacy-2','legacy-3','legacy-4','legacy-5','drawing','audit'],costing:['cad-to-boq','mec-html-suite','legacy-1','legacy-7','legacy-8'],automation:['mec-html-suite','pandarithm','cad-to-boq','lifeos','legacy-0','legacy-1','audit','batch','legacy-9']};
+  const archiveCards=[...document.querySelectorAll('#projectGrid .project-card')];
   function filterProjects() {
     const query = document.getElementById('projectSearch').value.trim().toLowerCase();
+    const ranked=categoryPriority[activeFilter]||[];const ordered=activeFilter==='all'?archiveCards:[...archiveCards].sort((a,b)=>{const ai=ranked.indexOf(a.dataset.id),bi=ranked.indexOf(b.dataset.id);return (ai<0?999:ai)-(bi<0?999:bi)});document.getElementById('projectGrid').append(...ordered);
     let count = 0;
     document.querySelectorAll('#projectGrid .project-card').forEach(card => {
       const matches = (activeFilter === 'all' || (card.dataset.categories || card.dataset.cat).split(' ').includes(activeFilter)) && card.dataset.search.includes(query);
@@ -101,7 +104,9 @@
   function openProject(id) {
     id=data.projectAliases?.[id]||id; const p=projects.get(id); if(!p)return; openedProject=p;
     const gallery=p.images.length ? `<div class="case-gallery">${p.images.map(image=>`<div><img src="${esc(image.src)}" alt="${esc(image.alt)}" loading="lazy"><p class="image-caption">${esc(image.caption||image.alt)}</p><a href="${esc(image.src)}" target="_blank" rel="noopener noreferrer">Open image</a></div>`).join('')}</div>` : p.mediaKind==="progress" ? `<div class="case-progress"><img src="assets/img/panda-progress.svg" alt="Panda-themed work in progress illustration" width="640" height="400"><p>${esc(p.mediaNote)}</p></div>` : `<div class="case-media-notice">${p.mediaNotice==="Confidential"?`<img class="panda-confidential" src="assets/img/panda-confidential.svg" alt="Headphone panda holding a closed lock" width="480" height="300">`:""}<strong>${esc(p.mediaNotice||"Preview unavailable")}</strong><p>${esc(p.mediaNote||"No public screenshot is available yet.")}</p></div>`;
-    document.getElementById('dialogContent').innerHTML = `<p class="eyebrow">${esc(data.categories[p.cat])}</p><h2 id="dialogTitle">${esc(p.title)}</h2><p class="dialog-meta">${esc(p.meta)} · ${esc(p.status)}</p><p>${esc(p.summary)}</p>${gallery}${paragraphSections(p)}${p.contributions.length?`<h3>Key contributions</h3><ul>${p.contributions.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${p.scope?`<p class="case-scope">${esc(p.scope)}</p>`:''}<div class="brief-actions">${p.live?`<a class="button" href="${esc(p.live)}" target="_blank" rel="noopener noreferrer">${esc(p.liveLabel||"Launch application")} <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a>`:""}<button class="button primary" id="downloadBrief">Download project brief</button><a href="#contact" id="discussProject">Discuss this work</a></div>`;
+    const factLabels={objective:'Engineering objective',role:'My role',tools:'Tools & methods',deliverables:'Deliverables',verification:'Verification status'};
+    const factSheet=p.recruitment?`<dl class="case-facts">${Object.entries(factLabels).map(([key,label])=>`<div><dt>${esc(label)}</dt><dd>${esc(p.recruitment[key])}</dd></div>`).join('')}</dl>`:'';
+    document.getElementById('dialogContent').innerHTML = `<p class="eyebrow">${esc(data.categories[p.cat])}</p><h2 id="dialogTitle">${esc(p.title)}</h2><p class="dialog-meta">${esc(p.meta)} · ${esc(p.status)}</p><p>${esc(p.summary)}</p>${factSheet}${gallery}${paragraphSections(p)}${p.contributions.length?`<h3>Key contributions</h3><ul>${p.contributions.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${p.scope?`<p class="case-scope">${esc(p.scope)}</p>`:''}<div class="brief-actions">${p.live?`<a class="button" href="${esc(p.live)}" target="_blank" rel="noopener noreferrer">${esc(p.liveLabel||"Launch application")} <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a>`:""}<button class="button primary" id="downloadBrief">Download project brief</button><a href="#contact" id="discussProject">Discuss this work</a></div>`;
     document.getElementById('downloadBrief').addEventListener('click',()=>downloadBrief(p));
     document.getElementById('discussProject').addEventListener('click',()=>dialog.close());
     dialog.showModal();dialog.scrollTop=0;window.dispatchEvent(new CustomEvent("portfolio-project-open",{detail:{id}}));
@@ -110,7 +115,8 @@
   document.getElementById('closeDialog').addEventListener('click',()=>dialog.close());
   function downloadBrief(p) {
     const sectionText=p.sections?p.sections.map(section=>"## "+section.title+"\n"+(section.text||section.items.map((item,i)=>(i+1)+". "+item).join("\n"))).join("\n\n"):null;
-    const content = `# ${p.title}\n\n${p.meta} · ${p.status}\n\n${p.summary}\n\n${sectionText?sectionText+"\n\n":p.problem?`## Problem\n${p.problem}\n\n## Contribution\n${p.contribution}\n\n`:''}${sectionText?"":"## Workflow\n"+p.body}\n\n${p.contributions.length?'## Key contributions\n'+p.contributions.map(x=>'- '+x).join('\n')+'\n\n':''}${p.scope?'## Scope\n'+p.scope+'\n\n':''}Portfolio updated ${data.updated}.\nContact: dulayruzzel13@gmail.com\n`;
+    const recruitmentText=p.recruitment?Object.entries(p.recruitment).map(([key,value])=>'## '+key+'\n'+value).join('\n\n')+'\n\n':'';
+    const content = `# ${p.title}\n\n${p.meta} · ${p.status}\n\n${p.summary}\n\n${recruitmentText}${sectionText?sectionText+"\n\n":p.problem?`## Problem\n${p.problem}\n\n## Contribution\n${p.contribution}\n\n`:''}${sectionText?"":"## Workflow\n"+p.body}\n\n${p.contributions.length?'## Key contributions\n'+p.contributions.map(x=>'- '+x).join('\n')+'\n\n':''}${p.scope?'## Scope\n'+p.scope+'\n\n':''}Portfolio updated ${data.updated}.\nContact: dulayruzzel13@gmail.com\n`;
     const blob=new Blob([content],{type:'text/markdown;charset=utf-8'}), url=URL.createObjectURL(blob), link=document.createElement('a');
     link.href=url;link.download=p.id+'-project-brief.md';link.click();URL.revokeObjectURL(url);
   }

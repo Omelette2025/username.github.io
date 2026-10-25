@@ -1,0 +1,6 @@
+{
+  "tracked_files": 153,
+  "potential_secrets": [],
+  "files_with_internal_path_patterns": [],
+  "scope": "Tracked text files and filenames. Binary/image content and historical Git blobs are not comprehensively scanned."
+}

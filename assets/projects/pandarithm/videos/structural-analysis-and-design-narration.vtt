@@ -1,0 +1,36 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.999
+This is Pandarithm, a web-based structural engineering application I've been
+developing.
+
+2
+00:00:07.000 --> 00:00:12.999
+It provides interactive tools for structural analysis, reinforced concrete
+design, and steel design.
+
+3
+00:00:13.000 --> 00:00:20.999
+For example, in the beam analysis module, users can define supports, specify
+spans, and apply loading conditions.
+
+4
+00:00:21.000 --> 00:00:31.999
+The application uses finite element formulations and the matrix stiffness
+method to calculate reactions, shear forces, bending moments, and deflections.
+
+5
+00:00:32.000 --> 00:00:43.999
+I've also implemented engineering design calculations, code-based checks, and
+validation tests to compare computed results against established solutions.
+
+6
+00:00:44.000 --> 00:00:50.999
+Pandarithm is currently in beta, with ongoing improvements to design coverage
+and verification.
+
+7
+00:00:51.000 --> 00:00:59.999
+This project demonstrates how I combine structural engineering principles with
+programming to develop practical engineering tools.

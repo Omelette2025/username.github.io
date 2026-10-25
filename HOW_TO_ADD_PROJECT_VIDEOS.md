@@ -1,3 +1,5 @@
+> 25 October 2026: the three reviewed demos are now configured locally. Other slots remain pending. Optional `captions` accepts a local `.vtt` path in the project videos folder. See docs/DEMO_INTEGRATION_2026-10-25.md.
+
 # How to add project videos
 
 Open a terminal in the portfolio folder containing `index.html` and `package.json`. Node.js is required; no dependency installation is needed. Paths below are relative to that folder.
@@ -17,7 +19,7 @@ Open a terminal in the portfolio folder containing `index.html` and `package.jso
 3. Run `npm run preview`. Open `http://127.0.0.1:8780`, find your featured project and click **Watch Demo**, or open its case study. If the preview is already running, just refresh it after building; do not start a second server on the same port. Stop preview with Ctrl+C.
 4. Copy more recordings into the same folder and rebuild to get a playlist. No recording means no Watch Demo action or broken player.
 
-Discovery runs at build time. The browser cannot enumerate the folder. Rebuild after adding, renaming or removing files.
+Discovery runs at build time. The browser cannot enumerate the folder. Every project has a configuration slot, and additional project IDs use the same assets/projects/<id>/videos convention. Confidential projects reject public recordings during the build. Three reviewed demos are configured; remaining recordings are pending. Do not add private source files. Rebuild after adding, renaming or removing files.
 
 ## Customize titles, thumbnails and chapters
 
@@ -123,4 +125,4 @@ Use MP4 with H.264 video and AAC audio, 1080p and 16:9. Compress enough to load 
 | Netlify size/deploy issue | Read the deploy log and current account limits. Move large recordings to YouTube or a media host. Removing a file does not remove its existing Git history. |
 | Old production content | Confirm the deployed commit, generated manifest and filename case, then hard refresh. |
 
-Initial video arrays intentionally remain empty. Disposable test recordings are not production content. Provider URL handling and teardown are tested separately from future hosted recordings, whose availability you must check after upload.
+Unconfigured video arrays remain empty. Disposable test recordings are not production content. Provider URL handling and teardown are tested separately from future hosted recordings, whose availability you must check after upload.

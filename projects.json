@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-24",
   "projects": [
     {
       "id": "legacy-0",
@@ -29,12 +29,22 @@
         "VBA",
         "Automation"
       ],
-      "featured": false
+      "featured": false,
+      "recruitment": {
+        "objective": "Reduce repeated entry across elevator proposals, specifications and pricing.",
+        "role": "Excel/VBA proposal automation developer.",
+        "tools": "Excel, VBA, synchronized input and event handling.",
+        "deliverables": "Linked proposal, specification and pricing workflow.",
+        "verification": "Earlier workplace tool; outputs and assumptions require project review."
+      },
+      "categories": [
+        "automation"
+      ]
     },
     {
       "id": "legacy-1",
       "title": "IEEI AUTOCALC: Automated Costing & Estimation Tool",
-      "cat": "automation",
+      "cat": "costing",
       "status": "Selected earlier work",
       "meta": "2025 · Developed in-house at IEEI · Estimation & Costing",
       "summary": "An Excel/VBA tool for repeatable multi-story estimates and more consistent cost reporting.",
@@ -63,7 +73,14 @@
       "categories": [
         "costing",
         "automation"
-      ]
+      ],
+      "recruitment": {
+        "objective": "Translate project parameters into repeatable quantity and budget outputs.",
+        "role": "Estimation workflow and VBA automation developer.",
+        "tools": "Excel, VBA, variable project inputs and linked costing sheets.",
+        "deliverables": "Itemized costing and preliminary estimate outputs.",
+        "verification": "Earlier workplace tool; not an independently certified estimating system."
+      }
     },
     {
       "id": "legacy-2",
@@ -90,7 +107,17 @@
         "ETABS",
         "RC Design"
       ],
-      "featured": false
+      "featured": false,
+      "recruitment": {
+        "objective": "Model the structural response of a reinforced-concrete building.",
+        "role": "Structural modeling, analysis and documentation.",
+        "tools": "ETABS, AutoCAD, RC frame modeling and load cases.",
+        "deliverables": "ETABS structural model and engineering documentation.",
+        "verification": "Earlier project; independent calculation validation is not established by this portfolio."
+      },
+      "categories": [
+        "structural"
+      ]
     },
     {
       "id": "legacy-3",
@@ -119,7 +146,17 @@
         "Structural",
         "Steel"
       ],
-      "featured": false
+      "featured": false,
+      "recruitment": {
+        "objective": "Develop a steel warehouse model for gravity and lateral loading.",
+        "role": "Structural modeling and analysis.",
+        "tools": "ETABS, steel framing, roof trusses, wind and seismic load cases.",
+        "deliverables": "Warehouse structural model and design documentation.",
+        "verification": "Earlier project; source scope is described without a new certification claim."
+      },
+      "categories": [
+        "structural"
+      ]
     },
     {
       "id": "legacy-4",
@@ -149,7 +186,17 @@
         "ETABS",
         "RC Design"
       ],
-      "featured": false
+      "featured": false,
+      "recruitment": {
+        "objective": "Coordinate structural modeling with multi-story residential documentation.",
+        "role": "Structural modeling and drawing development.",
+        "tools": "ETABS, AutoCAD and reinforced-concrete framing.",
+        "deliverables": "Structural model and coordinated drawing deliverables.",
+        "verification": "Earlier project; outputs are shown within the documented scope."
+      },
+      "categories": [
+        "structural"
+      ]
     },
     {
       "id": "legacy-5",
@@ -174,7 +221,17 @@
         "Research",
         "Seismic"
       ],
-      "featured": false
+      "featured": false,
+      "recruitment": {
+        "objective": "Compare seismic-response strategies for a five-story school.",
+        "role": "Thesis researcher and structural-analysis contributor.",
+        "tools": "ETABS, SAP2000 and nonlinear time-history comparisons.",
+        "deliverables": "Models and comparative seismic-response findings for the thesis.",
+        "verification": "Academic research; not a building safety certification."
+      },
+      "categories": [
+        "structural"
+      ]
     },
     {
       "id": "legacy-7",
@@ -196,7 +253,17 @@
         "PlanSwift",
         "Estimation"
       ],
-      "featured": false
+      "featured": false,
+      "recruitment": {
+        "objective": "Measure quantities from drawings for structured estimation.",
+        "role": "Digital quantity takeoff and measurement.",
+        "tools": "PlanSwift, drawing interpretation and quantity checks.",
+        "deliverables": "Organized material quantities supporting estimates.",
+        "verification": "Academic/professional training work; measurement requires reviewed drawings."
+      },
+      "categories": [
+        "costing"
+      ]
     },
     {
       "id": "legacy-8",
@@ -220,12 +287,22 @@
         "Excel",
         "Estimation"
       ],
-      "featured": false
+      "featured": false,
+      "recruitment": {
+        "objective": "Make estimation workbooks easier to audit and repeat.",
+        "role": "Workbook audit and estimation workflow development.",
+        "tools": "Excel, workbook schemas and quantity/cost consistency review.",
+        "deliverables": "Reviewed workbook structure and estimation workflow.",
+        "verification": "Reference build; not a final approved project estimate."
+      },
+      "categories": [
+        "costing"
+      ]
     },
     {
       "id": "legacy-9",
       "title": "Gamified Reviewing Tool",
-      "cat": "python",
+      "cat": "automation",
       "status": "Updated tool · preview in progress",
       "meta": "2025–2026 · Personal Project · MPLE Board Exam Reviewer",
       "summary": "An updated gamified study and review tool, evolved from the earlier review engine.",
@@ -262,7 +339,17 @@
           "text": "The name and project continuity reflect the creator’s update. The revised implementation has not been independently retested in this portfolio pass."
         }
       ],
-      "mediaKind": "progress"
+      "mediaKind": "progress",
+      "recruitment": {
+        "objective": "Organize study and review into a repeatable learning workflow.",
+        "role": "Independent review-tool developer.",
+        "tools": "Python and HTML/JavaScript, as documented for the earlier implementation.",
+        "deliverables": "Gamified reviewing workflow; updated interface capture is pending.",
+        "verification": "Current revision is under development; no current-version validation claimed."
+      },
+      "categories": [
+        "automation"
+      ]
     },
     {
       "id": "pandarithm",
@@ -346,7 +433,18 @@
         }
       ],
       "live": "https://pandarithm-beta.onrender.com/dashboard/",
-      "liveLabel": "Launch Pandarithm Beta"
+      "liveLabel": "Launch Pandarithm Beta",
+      "recruitment": {
+        "objective": "Make structural analysis calculations organized, reviewable and repeatable.",
+        "role": "Project Creator, Engineering Logic Developer and Validation Lead.",
+        "tools": "Python, Flask, NumPy, structural formulations and browser diagrams.",
+        "deliverables": "Beta analysis workspaces, diagrams and calculation-report workflows.",
+        "verification": "Scoped beam evidence and a live sample checked; module verification is ongoing."
+      },
+      "categories": [
+        "structural",
+        "automation"
+      ]
     },
     {
       "id": "drawing",
@@ -369,7 +467,17 @@
       "featured": false,
       "contributions": [],
       "mediaNotice": "Confidential",
-      "mediaNote": "Project drawings are withheld; no public screenshot is available."
+      "mediaNote": "Project drawings are withheld; no public screenshot is available.",
+      "recruitment": {
+        "objective": "Coordinate engineering drawings and related project documentation.",
+        "role": "Drafting and coordination work; project-specific details withheld.",
+        "tools": "Confidential project methods and files are withheld.",
+        "deliverables": "Confidential deliverables; no public project drawings.",
+        "verification": "Review remains project-specific; private evidence is not published."
+      },
+      "categories": [
+        "structural"
+      ]
     },
     {
       "id": "audit",
@@ -390,13 +498,24 @@
       ],
       "images": [],
       "featured": false,
-      "contributions": []
+      "contributions": [],
+      "recruitment": {
+        "objective": "Make ETABS model review and load-related checks more repeatable.",
+        "role": "Local engineering automation workflow development.",
+        "tools": "ETABS-oriented audit logic and local automation scaffold.",
+        "deliverables": "Candidate audit and load-workflow tooling.",
+        "verification": "Local scaffold; production deployment and complete validation not verified."
+      },
+      "categories": [
+        "automation",
+        "structural"
+      ]
     },
     {
       "id": "batch",
       "title": "Calculation Batch Runner & Evidence Reports",
       "short": "Calculation Batch Runner & Evidence Reports",
-      "cat": "python",
+      "cat": "automation",
       "status": "Confidential",
       "meta": "Engineering automation · Private project",
       "summary": "Confidential engineering automation project. Implementation details, inputs and reports are withheld.",
@@ -411,13 +530,23 @@
       "featured": false,
       "contributions": [],
       "mediaNotice": "Confidential",
-      "mediaNote": "Implementation details and project reports are withheld."
+      "mediaNote": "Implementation details and project reports are withheld.",
+      "recruitment": {
+        "objective": "Confidential engineering automation project.",
+        "role": "Role details are withheld for confidentiality.",
+        "tools": "Implementation details are withheld.",
+        "deliverables": "Project inputs, outputs and reports are not published.",
+        "verification": "Private review evidence is withheld; no public validation claim."
+      },
+      "categories": [
+        "automation"
+      ]
     },
     {
       "id": "lifeos",
       "title": "Life OS",
       "short": "LifeOS",
-      "cat": "knowledge",
+      "cat": "automation",
       "status": "Local development · optional cloud authoring",
       "meta": "Local-First Knowledge & Project Documentation System",
       "summary": "An evolving knowledge and project workspace: Second Brain expanded into Life OS, then added project review, documentation and agent-assisted workflows.",
@@ -506,13 +635,23 @@
           "period": "Present · continuing development"
         }
       ],
-      "evolutionNote": "Work began around April 2026. The stages overlap as the project continues to develop."
+      "evolutionNote": "Work began around April 2026. The stages overlap as the project continues to develop.",
+      "recruitment": {
+        "objective": "Keep project context, documentation and knowledge connected.",
+        "role": "Creator of local knowledge and project-documentation workflows.",
+        "tools": "Flask, SQLite, Markdown and Obsidian-compatible links.",
+        "deliverables": "Local workspace, observed project notes and reviewed documentation workflows.",
+        "verification": "Observer tests passed in isolation; private production services were not connected."
+      },
+      "categories": [
+        "automation"
+      ]
     },
     {
       "id": "mec-html-suite",
       "title": "MEC Cost Control Suite",
       "short": "Browser-based cost control tools",
-      "cat": "automation",
+      "cat": "costing",
       "status": "Local HTML tool suite",
       "meta": "2026 · HTML-based work automation",
       "summary": "An evolving cost-control workspace bringing the latest HELIO dashboard, expense monitoring, PDF-to-Excel extraction and engineering workflow automation into one suite.",
@@ -589,7 +728,14 @@
       "categories": [
         "costing",
         "automation"
-      ]
+      ],
+      "recruitment": {
+        "objective": "Bring recurring cost reporting and commercial records into a repeatable workflow.",
+        "role": "Cost-control workflow and automation development.",
+        "tools": "HTML/JavaScript, Excel workflows, reporting and reconciliation.",
+        "deliverables": "Browser suite incorporating dashboard, monitoring, extraction and ledger history.",
+        "verification": "Empty interface checked; populated employer records are withheld and outputs require review."
+      }
     },
     {
       "id": "cad-to-boq",
@@ -666,15 +812,20 @@
       "categories": [
         "costing",
         "automation"
-      ]
+      ],
+      "recruitment": {
+        "objective": "Connect reviewed drawing quantities with organized cost-estimation inputs.",
+        "role": "Engineering estimation and automation development.",
+        "tools": "Python, ezdxf, explicit unit/entity mappings and Excel.",
+        "deliverables": "Traceable sample quantity extraction and Excel-connected BOQ workflow.",
+        "verification": "Isolated DXF sample checked; complete estimating and native Excel validation remain ongoing."
+      }
     }
   ],
   "categories": {
-    "structural": "Structural engineering",
-    "costing": "Cost & estimation",
-    "automation": "Engineering automation",
-    "python": "Python & workflows",
-    "knowledge": "Knowledge systems"
+    "structural": "Structural Engineering",
+    "costing": "Cost Engineering & Quantity Surveying",
+    "automation": "Engineering Automation"
   },
   "experience": [
     {
@@ -759,7 +910,7 @@
       "date": "Work in progress"
     }
   ],
-  "revision": "7.1",
+  "revision": "8.0",
   "projectAliases": {
     "legacy-6": "mec-html-suite",
     "legacy-10": "mec-html-suite",
