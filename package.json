@@ -1,5 +1,22 @@
 {
   "name": "ruzzel-engineering-portfolio",
   "private": true,
-  "scripts": {"build": "node scripts/build.mjs", "preview": "node scripts/preview.mjs"}
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "node --test tests/analytics.test.mjs",
+    "analytics:migrate": "node scripts/analytics-migrate.mjs",
+    "analytics:password": "node scripts/analytics-password.mjs",
+    "preview:analytics": "node scripts/analytics-preview.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "@netlify/database": "^2.0.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.13"
+  },
+  "engines": {
+    "node": ">=22"
+  }
 }

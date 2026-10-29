@@ -35,3 +35,7 @@ Application state: deployed f248808. This preservation pass did not perform new 
 - Confidential batch current descriptions/search/chat details: generic private status and headphone-panda lock.
 
 Old screenshots/test output may depict intentionally superseded states. Do not restore them as a 'fix'. No untested issue is claimed to be a reproduced production failure.
+
+
+## 28 October 2026 local scope
+Analytics production integration awaits a dedicated database, server environment configuration and staging verification. Local tests pass; Netlify edge rate limits and scheduled invocation are not verified in production. Existing unused sw.js has a legacy syntax issue and no registration references were found; it was not changed by this task.
