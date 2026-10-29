@@ -68,12 +68,28 @@ export async function report(query,environment,days=30,grain='day') {
 export const RETENTION_SQL=`WITH old_opens AS (DELETE FROM portfolio_analytics.page_opens WHERE environment=$1 AND opened_at<now()-interval '365 days'),old_events AS (DELETE FROM portfolio_analytics.events WHERE environment=$1 AND occurred_at<now()-interval '365 days'),old_sessions AS (DELETE FROM portfolio_analytics.sessions WHERE environment=$1 AND last_event_at<now()-interval '365 days') SELECT 'retention complete' AS status`;
 
 // Automatic document opens: no browser/session ID, cookie, IP, UA, path or referral stored.
-export const OPEN_SQL=`WITH accepted AS (
- INSERT INTO portfolio_analytics.page_opens(environment,event_id,opened_at) VALUES($1,$2::uuid,now())
- ON CONFLICT(environment,event_id) DO NOTHING RETURNING opened_at
+export const OPEN_SQL=`WITH saved AS (
+ INSERT INTO portfolio_analytics.page_opens(environment,event_id,opened_at,elapsed_seconds,last_seen_at) VALUES($1,$2::uuid,now(),0,now())
+ ON CONFLICT(environment,event_id) DO UPDATE SET last_seen_at=now(),elapsed_seconds=greatest(portfolio_analytics.page_opens.elapsed_seconds,
+ least($3::int,greatest(0,floor(extract(epoch FROM clock_timestamp()-portfolio_analytics.page_opens.opened_at)))::int+2))
+ RETURNING opened_at,(xmax=0) AS is_new
 ), total AS (
  INSERT INTO portfolio_analytics.open_totals(environment,page_opens,tracking_started)
- SELECT $1,count(*),min(opened_at) FROM accepted HAVING count(*)>0
+ SELECT $1,count(*) FILTER(WHERE is_new),min(opened_at) FROM saved HAVING bool_or(is_new)
  ON CONFLICT(environment) DO UPDATE SET page_opens=portfolio_analytics.open_totals.page_opens+excluded.page_opens
-) SELECT count(*)::int AS accepted FROM accepted`;
+) SELECT 1 AS accepted`;
 export const OPEN_COUNTER_SQL=`SELECT page_opens::text,tracking_started FROM portfolio_analytics.open_totals WHERE environment=$1`;
+
+export async function visitReport(query,environment,days=30,grain='week') {
+ if(![7,30,90,365].includes(days)||!['day','week','month'].includes(grain))throw Error('Invalid report period');
+ const bound=[environment,days], [total]=await query(OPEN_COUNTER_SQL,[environment]);
+ const [summary]=await query(`SELECT count(*)::int AS visits,count(*) FILTER(WHERE elapsed_seconds>0)::int AS timed_visits,
+ coalesce(avg(elapsed_seconds) FILTER(WHERE elapsed_seconds>0),0)::float AS average_elapsed_seconds,
+ coalesce(sum(elapsed_seconds),0)::float AS elapsed_seconds FROM portfolio_analytics.page_opens
+ WHERE environment=$1 AND opened_at>=date_trunc('day',now())-($2::int-1)*interval '1 day'`,bound);
+ const traffic=await query(`WITH dates AS(SELECT generate_series(date_trunc('${grain}',date_trunc('day',now())-($2::int-1)*interval '1 day'),date_trunc('${grain}',now()),interval '1 ${grain}') AS bucket),
+ visits AS(SELECT date_trunc('${grain}',opened_at) AS bucket,count(*)::int AS visits,coalesce(avg(elapsed_seconds) FILTER(WHERE elapsed_seconds>0),0)::float AS average_elapsed_seconds
+ FROM portfolio_analytics.page_opens WHERE environment=$1 AND opened_at>=date_trunc('day',now())-($2::int-1)*interval '1 day' GROUP BY 1)
+ SELECT dates.bucket,coalesce(visits.visits,0) AS visits,coalesce(average_elapsed_seconds,0) AS average_elapsed_seconds FROM dates LEFT JOIN visits USING(bucket) ORDER BY bucket`,bound);
+ return {days,grain,timezone:'UTC',totalVisits:Number(total?.page_opens||0),since:total?.tracking_started||null,summary,traffic};
+}

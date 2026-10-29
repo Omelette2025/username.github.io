@@ -1,3 +1,6 @@
+## Latest requested behavior
+Read SIMPLE_VISITS_2026-10-29.md first. Consent UI and detailed tracking were replaced with compact automatic visit counting plus elapsed page-open time. Older analytics descriptions below are historical.
+
 ## CURRENT LIVE STATUS — 29 October 2026
 Analytics is deployed and live-verified. Read ANALYTICS_PRODUCTION_VERIFICATION_2026-10-29.md first; older pending-activation notes below are historical. Do not recreate the database or rotate working credentials.
 
