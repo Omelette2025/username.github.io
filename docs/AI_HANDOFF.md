@@ -1,3 +1,6 @@
+## CURRENT LIVE STATUS — 29 October 2026
+Analytics is deployed and live-verified. Read ANALYTICS_PRODUCTION_VERIFICATION_2026-10-29.md first; older pending-activation notes below are historical. Do not recreate the database or rotate working credentials.
+
 
 ## 29 October activation revision
 The Netlify project now has a provisioned managed PostgreSQL database. Do not recreate it. Use ANALYTICS_DATABASE_PROVIDER=netlify with @netlify/database; no manually copied database URL is needed. SQL migration netlify/database/migrations/202610290001_portfolio_analytics.sql is applied by Netlify before publication. Personal-token production write access remains disabled.
